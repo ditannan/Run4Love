@@ -1,0 +1,10 @@
+---
+title: "Run4Love"
+author: "xzm"
+date: "2018/1/28"
+output:
+  html_document: default
+  github_document: default
+---
+
+# Compare the baseline between the two groups
