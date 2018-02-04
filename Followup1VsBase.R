@@ -2,7 +2,7 @@
 # Edited by Qiao Jiaying
 # Revised by Xzm
 # Last updated: 2018/1/26
-# n = 166 （A=84，B=82)
+# n = 210 （A=105，B=105)
 #**************************#
 
 options(digits=3)
@@ -10,11 +10,12 @@ options(digits=3)
 # loading packages
 library(plyr)
 library(dplyr)
+library(tidyverse)
 
 setwd("C:/Users/xzm/Desktop/runforlove")
 
 # read data
-df <- data.frame(read.csv("followup/aa-0112.csv", stringsAsFactors=FALSE))
+df <- read_csv("followup/aa-0202.csv")
 
 
 #定量数据检验
