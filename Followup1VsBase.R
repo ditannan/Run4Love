@@ -36,8 +36,8 @@ qtest <- function(x, y = df.bl){
 attach(df)
 # select variables and range by q1_id
 df.sub1 <- df %>% 
-  select(q1_id, group, pssscore, poscope, negcope, cesdscore, MET,
-         gsesscore, qolscore, stigmascore, insti, obs) %>% 
+  dplyr::select(q1_id, group, pssscore, poscope, negcope, cesdscore, MET,
+         gsesscore, qolscore, stigmascore, insti, phq9score, obs) %>% 
   arrange(q1_id)
 # names(df)
 # calculate the change of pss, poscope and negcope, ces-d, MET, gses, qol, stigma
@@ -49,7 +49,8 @@ df.sub1.d <- ddply(df.sub1, .(q1_id), mutate, d_pss = pssscore[2] - pssscore[1],
                    d_gsesscore = gsesscore[2] - gsesscore[1], 
                    d_qolscore = qolscore[2] - qolscore[1], 
                    d_stigmascore = stigmascore[2] - stigmascore[1], 
-                   d_insti = insti[2] - insti[1]
+                   d_insti = insti[2] - insti[1],
+                   d_phq = phq9score[2] - phq9score[1]
                    )
 
 # baseline data
